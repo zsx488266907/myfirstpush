@@ -1,0 +1,17 @@
+package com.wd.tech.mypush.application;
+
+import android.app.Application;
+
+import cn.jpush.android.api.JPushInterface;
+
+public class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+
+        JPushInterface.setAlias(this,1,"dasd");
+
+    }
+}
